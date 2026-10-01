@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "zesty-220-likes",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "vars": {
+    // Public Turnstile site key (safe to expose — browser-visible by design)
+    "TURNSTILE_SITE_KEY": "0x4AAAAAAFLICIokx6zHNpTP"
+  }
+
+  // ─────────────────────────────────────────────────────────────────
+  // SECRETS — do NOT add them here. Set them in Cloudflare Dashboard:
+  //   Worker → Settings → Variables and Secrets → Add secret
+  //
+  //   TURNSTILE_SECRET  = 0x4AAAAAAFLICCXoXBACekHvukmgiMglL
+  //   LIKE_API_KEY      = SulavOp
+  //
+  // Secrets stay server-side only and never appear in source code.
+  // ─────────────────────────────────────────────────────────────────
+}

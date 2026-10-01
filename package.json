@@ -1,0 +1,13 @@
+{
+  "name": "zesty-220-likes",
+  "private": true,
+  "version": "4.0.0",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler versions upload"
+  },
+  "devDependencies": {
+    "wrangler": "^4.68.0"
+  }
+}
