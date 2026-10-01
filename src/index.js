@@ -146,7 +146,7 @@ export default {
     if (url.pathname === "/" || url.pathname === "/index.html") {
       const assetResponse = await env.ASSETS.fetch(request);
       const html = await assetResponse.text();
-      const siteKey = JSON.stringify(env.TURNSTILE_SITE_KEY || "");
+      const siteKey = JSON.stringify(env.TURNSTILE_SITE_KEY || "0x4AAAAAAFLICIokx6zHNpTP");
 
       const patched = html.replace(
         "</head>",
